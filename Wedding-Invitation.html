@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Shoaib Shaikh – Wedding Invitation</title>
+    <meta name="theme-color" content="#04241c" />
+    <meta
+      name="description"
+      content="With Allah’s blessings, you are warmly invited to the Walima of Shoaib and Nazish on 28 December 2026."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Wedding Invitation" />
+    <meta property="og:title" content="Shoaib &amp; Nazish | Walima Invitation" />
+    <meta
+      property="og:description"
+      content="You are warmly invited to the Walima on Monday, 28 December 2026. Tap to open the invitation."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Amiri:wght@400;700&family=Cinzel+Decorative:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --em: #06352a;
+        --em2: #0a4a3a;
+        --em3: #04241c;
+        --gold: #d9bf86;
+        --gold2: #f0dfb0;
+        --ivory: #f7f0df;
+        --mute: #bfcfc4;
+        --serif: "Cormorant Garamond", Georgia, serif;
+        --ar: "Amiri", "Times New Roman", serif;
+        --disp: "Cinzel Decorative", Georgia, serif;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: env(safe-area-inset-top, 0px);
+      }
+      body {
+        margin: 0;
+        background: var(--em3);
+        color: var(--ivory);
+        font-family: var(--serif);
+        font-size: 18px;
+        line-height: 1.6;
+        overflow-x: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-text-size-adjust: 100%;
+      }
+      .en {
+        font-style: italic;
+        color: var(--mute);
+        margin: 6px auto 0;
+        max-width: 28em;
+        font-size: 18px;
+      }
+      .en span {
+        color: var(--gold);
+      }
+      body.lock {
+        overflow: hidden;
+      }
+      .pat {
+        background-color: var(--em);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23d9bf86' stroke-opacity='.14' stroke-width='1'%3E%3Cpath d='M40 6l8 14 16-4-4 16 14 8-14 8 4 16-16-4-8 14-8-14-16 4 4-16-14-8 14-8-4-16 16 4z'/%3E%3Ccircle cx='40' cy='40' r='9'/%3E%3C/g%3E%3C/svg%3E");
+      }
+      section {
+        position: relative;
+        padding: 84px 22px;
+        text-align: center;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      h2 {
+        font-family: var(--disp);
+        font-weight: 400;
+        font-size: clamp(24px, 6vw, 34px);
+        color: var(--gold2);
+        margin: 0 0 10px;
+        letter-spacing: 0.04em;
+      }
+      .ar {
+        font-family: var(--ar);
+        direction: rtl;
+        color: var(--gold);
+      }
+      .orn {
+        display: block;
+        margin: 14px auto;
+        width: 200px;
+        height: 18px;
+      }
+      .rv {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 1s ease,
+          transform 1s ease;
+      }
+      .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      /* cover */
+      #cover {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .door {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50.5%;
+        transition: transform 1.8s cubic-bezier(0.7, 0, 0.2, 1);
+        z-index: 1;
+      }
+      .door.l {
+        left: 0;
+        border-right: 1px solid var(--gold);
+      }
+      .door.r {
+        right: 0;
+        border-left: 1px solid var(--gold);
+      }
+      #cover.open .l {
+        transform: translateX(-101%);
+      }
+      #cover.open .r {
+        transform: translateX(101%);
+      }
+      #cover.open {
+        pointer-events: none;
+        transition: opacity 0.6s ease 1.5s;
+        opacity: 0;
+      }
+      .cv {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 24px;
+        transition:
+          opacity 0.6s,
+          transform 1s;
+      }
+      #cover.open .cv {
+        opacity: 0;
+        transform: scale(1.08);
+      }
+      .cv {
+        --aw: min(74vw, 42svh, 320px);
+      }
+      .arch {
+        width: var(--aw);
+        margin: 0 auto;
+      }
+      .bism {
+        font-size: clamp(22px, 6.6vw, 34px);
+        line-height: 1.5;
+        margin: calc(var(--aw) * -0.54) auto 0;
+        max-width: calc(var(--aw) * 0.72);
+        position: relative;
+      }
+      .btn {
+        display: inline-block;
+        font-family: var(--serif);
+        font-size: 19px;
+        letter-spacing: 0.14em;
+        color: var(--em3);
+        background: linear-gradient(135deg, var(--gold2), var(--gold) 60%, #b99a5b);
+        border: 0;
+        border-radius: 40px;
+        padding: 13px 34px;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 6px 26px rgba(217, 191, 134, 0.28);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 34px rgba(217, 191, 134, 0.45);
+      }
+      .btn:focus-visible,
+      .fab:focus-visible,
+      .gi:focus-visible {
+        outline: 2px solid var(--gold2);
+        outline-offset: 3px;
+      }
+      .pulse {
+        animation: pl 2.8s ease-in-out infinite;
+      }
+      @keyframes pl {
+        50% {
+          box-shadow: 0 0 0 12px rgba(217, 191, 134, 0);
+        }
+        0% {
+          box-shadow: 0 0 0 0 rgba(217, 191, 134, 0.5);
+        }
+      }
+      /* hero */
+      #hero {
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(ellipse at 50% 0, var(--em2), var(--em3) 70%);
+      }
+      .names {
+        font-family: var(--disp);
+        font-size: clamp(38px, 11vw, 72px);
+        line-height: 1.15;
+        color: var(--gold2);
+        margin: 8px 0;
+      }
+      .amp {
+        display: block;
+        font-family: var(--ar);
+        font-size: 0.55em;
+        color: var(--gold);
+      }
+      .sub {
+        font-style: italic;
+        color: var(--mute);
+        letter-spacing: 0.05em;
+      }
+      .dt {
+        margin-top: 26px;
+        font-size: 22px;
+        color: var(--gold);
+      }
+      .moon {
+        width: 54px;
+        margin: 0 auto 6px;
+        animation: fl 6s ease-in-out infinite;
+      }
+      @keyframes fl {
+        50% {
+          transform: translateY(-8px) rotate(-4deg);
+        }
+      }
+      .star {
+        position: absolute;
+        color: var(--gold);
+        opacity: 0.5;
+        animation: fl 7s ease-in-out infinite;
+        pointer-events: none;
+      }
+      /* message */
+      .msg p {
+        margin: 0 0 16px;
+      }
+      .msg .big {
+        font-size: 23px;
+        font-style: italic;
+        color: var(--gold2);
+      }
+      .fam {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+      }
+      .fc {
+        border: 1px solid rgba(217, 191, 134, 0.35);
+        border-radius: 200px 200px 14px 14px;
+        padding: 38px 20px 24px;
+        background: rgba(4, 36, 28, 0.55);
+      }
+      .fc h3 {
+        margin: 0 0 4px;
+        font-family: var(--disp);
+        font-weight: 400;
+        font-size: 18px;
+        color: var(--gold);
+      }
+      .fc p {
+        margin: 2px 0;
+        color: var(--ivory);
+      }
+      /* countdown */
+      .cds {
+        display: grid;
+        gap: 34px;
+        margin-top: 30px;
+      }
+      .cdt {
+        font-size: 21px;
+        color: var(--gold2);
+        margin-bottom: 10px;
+      }
+      .cd {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+      .cd div {
+        flex: 1;
+        max-width: 76px;
+        padding: 12px 0 8px;
+        border: 1px solid var(--gold);
+        border-radius: 36px 36px 8px 8px;
+        background: rgba(4, 36, 28, 0.6);
+      }
+      .cd b {
+        display: block;
+        font-family: var(--disp);
+        font-size: 26px;
+        font-weight: 400;
+        color: var(--gold2);
+        line-height: 1.1;
+      }
+      .cd span {
+        font-size: 14px;
+        color: var(--mute);
+        letter-spacing: 0.06em;
+      }
+      /* events */
+      .ev {
+        margin: 34px auto 0;
+        max-width: 460px;
+        padding: 46px 26px 34px;
+        border: 1px solid var(--gold);
+        border-radius: 230px 230px 18px 18px;
+        background: linear-gradient(180deg, rgba(10, 74, 58, 0.7), rgba(4, 36, 28, 0.85));
+        position: relative;
+      }
+      .ev.g {
+        background: linear-gradient(180deg, rgba(217, 191, 134, 0.14), rgba(4, 36, 28, 0.85));
+      }
+      .ev .tag {
+        font-size: 19px;
+        color: var(--gold);
+        font-style: italic;
+      }
+      .ev .day {
+        font-family: var(--disp);
+        font-size: clamp(46px, 14vw, 70px);
+        color: var(--gold2);
+        line-height: 1;
+        margin: 8px 0 0;
+      }
+      .ev .mo {
+        font-size: 22px;
+        letter-spacing: 0.12em;
+        color: var(--ivory);
+      }
+      .ev dl {
+        margin: 20px 0;
+        text-align: left;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 6px 16px;
+      }
+      .ev dt {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .ev dd {
+        margin: 0;
+      }
+      .tbd {
+        color: var(--mute);
+        font-style: italic;
+      }
+      .mapc {
+        margin: 16px 0 20px;
+        height: 96px;
+        border-radius: 12px;
+        border: 1px solid rgba(217, 191, 134, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: var(--mute);
+        background: repeating-linear-gradient(45deg, rgba(217, 191, 134, 0.05) 0 10px, transparent 10px 20px);
+      }
+      /* gallery */
+      .gal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 28px;
+      }
+      .gi {
+        aspect-ratio: 3/4;
+        border: 1px solid rgba(217, 191, 134, 0.4);
+        border-radius: 90px 90px 8px 8px;
+        overflow: hidden;
+        padding: 0;
+        background: var(--em2);
+        cursor: pointer;
+        transition:
+          transform 0.5s,
+          border-color 0.4s;
+      }
+      .gi:nth-child(3n + 1) {
+        aspect-ratio: 3/4.6;
+      }
+      .gi:hover {
+        transform: scale(1.03);
+        border-color: var(--gold2);
+      }
+      .gi img,
+      .gi svg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      #lb {
+        position: fixed;
+        inset: 0;
+        z-index: 90;
+        background: rgba(2, 18, 14, 0.96);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      #lb.on {
+        display: flex;
+        animation: fi 0.4s;
+      }
+      @keyframes fi {
+        from {
+          opacity: 0;
+        }
+      }
+      #lb .im {
+        width: min(92vw, 520px);
+        max-height: 80vh;
+        aspect-ratio: 3/4;
+        border: 1px solid var(--gold);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      #lb .im > * {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      #lb button {
+        position: absolute;
+        background: none;
+        border: 1px solid var(--gold);
+        color: var(--gold2);
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        font-size: 22px;
+        cursor: pointer;
+      }
+      #lb .x {
+        top: calc(16px + env(safe-area-inset-top, 0px));
+        right: 16px;
+      }
+      #lb .p {
+        left: 10px;
+        top: 50%;
+      }
+      #lb .n {
+        right: 10px;
+        top: 50%;
+      }
+      /* closing */
+      #close {
+        background: radial-gradient(ellipse at 50% 100%, var(--em2), var(--em3) 70%);
+        overflow: hidden;
+      }
+      .dua {
+        font-size: 28px;
+        line-height: 1.7;
+        margin: 20px 0;
+      }
+      .sig {
+        font-family: var(--disp);
+        color: var(--gold2);
+        font-size: 24px;
+        margin-top: 20px;
+      }
+      .fab {
+        position: fixed;
+        right: 16px;
+        top: calc(12px + env(safe-area-inset-top, 0px));
+        z-index: 60;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid var(--gold);
+        background: rgba(4, 36, 28, 0.88);
+        color: var(--gold2);
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(6px);
+      }
+      .fab.on {
+        display: flex;
+      }
+      .fab.play::after {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 1px solid var(--gold);
+        opacity: 0.5;
+        animation: rp 2.4s ease-out infinite;
+      }
+      @keyframes rp {
+        to {
+          transform: scale(1.35);
+          opacity: 0;
+        }
+      }
+      .fab.loc {
+        left: 16px;
+        right: auto;
+        width: auto;
+        padding: 0 16px 0 12px;
+        border-radius: 25px;
+        gap: 6px;
+        font-family: var(--serif);
+        font-size: 17px;
+        text-decoration: none;
+      }
+      #lm {
+        position: fixed;
+        left: 16px;
+        top: calc(70px + env(safe-area-inset-top, 0px));
+        z-index: 61;
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+        width: min(78vw, 300px);
+      }
+      #lm.on {
+        display: flex;
+      }
+      #lm a {
+        display: block;
+        padding: 12px 16px;
+        border: 1px solid var(--gold);
+        border-radius: 14px;
+        background: rgba(4, 36, 28, 0.96);
+        color: var(--gold2);
+        text-decoration: none;
+        backdrop-filter: blur(6px);
+      }
+      #lm small {
+        display: block;
+        color: var(--mute);
+        font-size: 15px;
+      }
+      @media (min-width: 600px) {
+        html {
+          background: #021510;
+        }
+        body {
+          max-width: 480px;
+          margin: 0 auto;
+          box-shadow: 0 0 80px #000;
+        }
+        #cover {
+          inset: 0 auto 0 50%;
+          width: 480px;
+          margin-left: -240px;
+        }
+        .fab {
+          right: calc(50% - 224px);
+        }
+        .fab.loc {
+          left: calc(50% - 224px);
+          right: auto;
+        }
+        #lm {
+          left: calc(50% - 224px);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition-duration: 0.01s !important;
+        }
+        .rv {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="lock">
+    <!-- COVER -->
+    <div id="cover">
+      <div class="door l pat"></div>
+      <div class="door r pat"></div>
+      <div class="cv">
+        <svg class="arch" viewBox="0 0 330 420" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#f0dfb0" />
+              <stop offset=".6" stop-color="#d9bf86" />
+              <stop offset="1" stop-color="#b99a5b" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M20 410V170C20 80 100 40 165 8C230 40 310 80 310 170V410"
+            fill="rgba(4,36,28,.7)"
+            stroke="url(#g)"
+            stroke-width="2.5"
+          />
+          <path
+            d="M38 410V176C38 96 105 60 165 32C225 60 292 96 292 176V410"
+            fill="none"
+            stroke="url(#g)"
+            stroke-width="1"
+            opacity=".7"
+          />
+          <path d="M165 72a22 22 0 1 0 16 38a17 17 0 1 1-16-38z" fill="url(#g)" transform="translate(-4 -6)" />
+          <path d="M183 78l3 8 8 1-6 6 2 8-7-4-7 4 2-8-6-6 8-1z" fill="#f0dfb0" />
+        </svg>
+        <div class="bism ar" lang="ar">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+        <p style="margin: calc(var(--aw) * 0.36) 0 6px; color: var(--mute); font-style: italic; font-size: 17px">
+          In the name of Allah, the Most Gracious, the Most Merciful
+        </p>
+        <p style="margin: 0 0 26px; font-size: 21px; color: var(--gold2)">You are warmly invited</p>
+        <button class="btn pulse" id="openBtn">Open Invitation</button>
+      </div>
+    </div>
+
+    <button class="fab" id="mus" aria-label="Play or pause music" title="Music">
+      <svg id="mi" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+    </button>
+
+    <a class="fab loc" id="loc" href="#" target="_blank" rel="noopener" aria-label="Venue location"
+      ><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"
+        /></svg
+      ><span>Location</span></a
+    >
+    <div id="lm"></div>
+
+    <!-- HERO -->
+    <section id="hero" class="pat">
+      <span class="star" style="top: 12%; left: 9%; font-size: 22px">✦</span
+      ><span class="star" style="top: 22%; right: 10%; font-size: 15px; animation-delay: -2s">✦</span>
+      <span class="star" style="bottom: 14%; left: 14%; font-size: 16px; animation-delay: -4s">✦</span
+      ><span class="star" style="bottom: 24%; right: 8%; font-size: 24px; animation-delay: -1s">✦</span>
+      <div class="wrap rv" data-first>
+        <svg class="moon" viewBox="0 0 60 60" aria-hidden="true">
+          <path d="M36 6a24 24 0 1 0 18 38A20 20 0 1 1 36 6z" fill="#d9bf86" />
+          <path d="M47 10l2 6 6 1-5 4 2 6-5-3-5 3 2-6-5-4 6-1z" fill="#f0dfb0" />
+        </svg>
+        <div class="ar" style="font-size: 26px" lang="ar">
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا
+        </div>
+        <p class="en">
+          “And among His signs is that He created for you spouses from among yourselves.” <span>Qur’an 30:21</span>
+        </p>
+        <p class="sub">Together with their families</p>
+        <h1 class="names" id="nm">Shoaib<span class="amp">وَ</span><span id="bn">Bride’s Name</span></h1>
+        <svg class="orn" viewBox="0 0 200 18" aria-hidden="true">
+          <path d="M0 9H80M120 9H200" stroke="#d9bf86" stroke-width="1" />
+          <path d="M100 1l8 8-8 8-8-8z" fill="none" stroke="#d9bf86" />
+          <circle cx="100" cy="9" r="2" fill="#d9bf86" />
+        </svg>
+        <div class="dt">28 December 2026</div>
+        <p class="sub">Monday</p>
+      </div>
+    </section>
+
+    <!-- MESSAGE -->
+    <section style="background: var(--em3)">
+      <div class="wrap msg rv">
+        <h2>With Joy &amp; Gratitude</h2>
+        <svg class="orn" viewBox="0 0 200 18" aria-hidden="true">
+          <path d="M0 9H80M120 9H200" stroke="#d9bf86" />
+          <path d="M100 1l8 8-8 8-8-8z" fill="none" stroke="#d9bf86" />
+        </svg>
+        <p class="big">By the grace of Allah, we joyfully invite you to share in the blessing of the nikah of</p>
+        <p style="font-family: var(--disp); font-size: 24px; color: var(--gold2)" id="nm2">
+          Shoaib Shaikh &amp; Bride’s Name
+        </p>
+        <p>
+          Your presence and heartfelt duas will make our celebration complete. We look forward to welcoming you with
+          love.
+        </p>
+        <div class="fam">
+          <div class="fc">
+            <h3>Groom’s Family</h3>
+            <p>Shaikh Family</p>
+            <p>Son of Rashid Rahim Shaikh</p>
+          </div>
+          <div class="fc">
+            <h3>Bride’s Family</h3>
+            <p>Khan Family</p>
+            <p>Daughter of Aftab Ahmed Khan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="pat">
+      <div class="wrap rv">
+        <h2>Counting the Days</h2>
+        <div class="ar" style="font-size: 24px" lang="ar">إن شاء الله</div>
+        <p class="en">In shaa Allah, if Allah wills</p>
+        <div class="cds" id="cds"></div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section style="background: var(--em3)">
+      <div class="wrap">
+        <h2 class="rv">The Celebration</h2>
+        <div id="evs"></div>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section id="close">
+      <div class="wrap rv" id="cl">
+        <svg class="moon" viewBox="0 0 60 60" aria-hidden="true">
+          <path d="M36 6a24 24 0 1 0 18 38A20 20 0 1 1 36 6z" fill="#d9bf86" />
+        </svg>
+        <h2>Jazakumullahu Khairan</h2>
+        <p>
+          Thank you for being part of our story. Your love, your time and your prayers are the greatest gift we could
+          ask for as we begin this journey together.
+        </p>
+        <div class="dua ar" lang="ar">
+          بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+        </div>
+        <p class="en">May Allah bless you both, shower His blessings upon you, and unite you in goodness.</p>
+        <div class="sig" id="sg">Shoaib Shaikh &amp; Family</div>
+        <p class="sub" style="margin-top: 34px; font-size: 16px">With love and duas</p>
+      </div>
+    </section>
+
+    <script>
+      /* ========= EDIT HERE ========= */
+      const CFG = {
+        groom: "Shoaib Shaikh",
+        bride: "Nazish Fatima Khan",
+        events: [
+          {
+            tag: "Walima · Groom’s Side",
+            date: "2026-12-28",
+            dayName: "Monday",
+            day: "28",
+            month: "December 2026",
+            time: "7:00 PM",
+            timeSet: true,
+            venue: "Abhinav Dnyan Mandir School",
+            address: "VN Purav Rd, Dhobi Ghat, Sector 10, Datta Nagar, Trombay, Mumbai, Maharashtra 400088",
+            mapQuery: "19.035528624571555,72.94688298309545",
+            iso: "2026-12-28T19:00:00+05:30",
+            cls: "g",
+          },
+        ],
+        photos: [] /* add image data-URIs here; empty slots show ornamental placeholders */,
+      };
+      /* ============================= */
+      const $ = (s) => document.querySelector(s);
+      const full = CFG.groom + " & " + CFG.bride;
+      document.title = full + " – Wedding Invitation";
+      $("#bn").textContent = CFG.bride.split(" ")[0];
+      $("#nm2").textContent = full;
+      $("#sg").textContent = CFG.groom + " & Family";
+
+      /* events + countdowns */
+      const pad = (n) => String(n).padStart(2, "0");
+      $("#evs").innerHTML = CFG.events
+        .map((e, i) => {
+          const dir = e.mapQuery
+            ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(e.mapQuery)}`
+            : "";
+          const tbd = (t) => `<span class="tbd">${t}</span>`;
+          return `<article class="ev ${e.cls} rv"><div class="tag">${e.tag}</div><div class="day">${e.day}</div><div class="mo">${e.month.toUpperCase()}</div><div class="tag" style="margin-top:6px">${e.dayName}</div>
+  <dl><dt>Time</dt><dd>${e.timeSet ? e.time : tbd("To be confirmed")}</dd><dt>Venue</dt><dd>${e.venue || tbd("To be added")}</dd><dt>Address</dt><dd>${e.address || tbd("To be added")}</dd></dl>
+  <div class="mapc"><svg width="26" height="26" viewBox="0 0 24 24" fill="#d9bf86"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg>${e.venue ? e.venue : "Location coming soon"}</div>
+  ${dir ? `<a class="btn" href="${dir}" target="_blank" rel="noopener">Get Directions</a>` : `<span class="btn" style="opacity:.55;cursor:default">Get Directions</span>`}</article>`;
+        })
+        .join("");
+      $("#cds").innerHTML = CFG.events
+        .map((e, i) => `<div><div class="cdt">${e.tag} · ${e.day} Dec</div><div class="cd" id="cd${i}"></div></div>`)
+        .join("");
+      function tick() {
+        const now = Date.now();
+        CFG.events.forEach((e, i) => {
+          let d = new Date(e.iso).getTime() - now;
+          const el = $("#cd" + i);
+          if (d <= 0) {
+            el.innerHTML =
+              '<div style="width:auto;padding:14px 26px;border-radius:30px;font-size:20px">Alhamdulillah, the celebration is here</div>';
+            return;
+          }
+          const v = [
+            Math.floor(d / 864e5),
+            Math.floor(d / 36e5) % 24,
+            Math.floor(d / 6e4) % 60,
+            Math.floor(d / 1e3) % 60,
+          ];
+          el.innerHTML = ["Days", "Hours", "Mins", "Secs"]
+            .map((l, k) => `<div><b>${pad(v[k])}</b><span>${l}</span></div>`)
+            .join("");
+        });
+      }
+      tick();
+      setInterval(tick, 1000);
+
+      /* scroll reveal */
+      const io = new IntersectionObserver(
+        (es) =>
+          es.forEach((x) => {
+            if (x.isIntersecting) {
+              x.target.classList.add("in");
+              io.unobserve(x.target);
+            }
+          }),
+        { threshold: 0.15 },
+      );
+      document.querySelectorAll(".rv:not([data-first])").forEach((el) => io.observe(el));
+
+      /* music: soft generated ambient (no external files) */
+      let ac,
+        master,
+        timer,
+        playing = false;
+      const scale = [293.66, 329.63, 369.99, 440, 493.88, 587.33, 659.25],
+        drone = [146.83, 220, 293.66];
+      function note(f, t, dur, vol, type) {
+        const o = ac.createOscillator(),
+          g = ac.createGain();
+        o.type = type;
+        o.frequency.value = f;
+        g.gain.setValueAtTime(0, t);
+        g.gain.linearRampToValueAtTime(vol, t + 0.08);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+        o.connect(g);
+        g.connect(master);
+        o.start(t);
+        o.stop(t + dur + 0.1);
+      }
+      function step() {
+        const t = ac.currentTime + 0.05;
+        if (step.n % 4 === 0) drone.forEach((f, i) => note(f, t, 6.5, (0.05 / (i + 1)) * 1.6, "sine"));
+        if (step.n % 2 === 0 || Math.random() < 0.4)
+          note(scale[Math.floor(Math.random() * scale.length)], t + Math.random() * 0.4, 3.2, 0.09, "triangle");
+        step.n++;
+      }
+      step.n = 0;
+      function setIcon() {
+        $("#mi").innerHTML = playing ? '<path d="M7 5h4v14H7zm6 0h4v14h-4z"/>' : '<path d="M8 5v14l11-7z"/>';
+        $("#mus").classList.toggle("play", playing);
+      }
+      function startMusic() {
+        try {
+          ac = ac || new (window.AudioContext || window.webkitAudioContext)();
+          if (!master) {
+            master = ac.createGain();
+            const d = ac.createDelay(1);
+            d.delayTime.value = 0.45;
+            const fb = ac.createGain();
+            fb.gain.value = 0.4;
+            master.connect(ac.destination);
+            master.connect(d);
+            d.connect(fb);
+            fb.connect(d);
+            d.connect(ac.destination);
+          }
+          ac.resume();
+          master.gain.cancelScheduledValues(ac.currentTime);
+          master.gain.setTargetAtTime(0.8, ac.currentTime, 1.2);
+          if (!timer) {
+            step();
+            timer = setInterval(step, 1800);
+          }
+          playing = true;
+          setIcon();
+        } catch (e) {}
+      }
+      function stopMusic() {
+        if (!ac) return;
+        master.gain.setTargetAtTime(0, ac.currentTime, 0.5);
+        clearInterval(timer);
+        timer = null;
+        playing = false;
+        setIcon();
+      }
+      $("#mus").onclick = () => (playing ? stopMusic() : startMusic());
+
+      const dirU = (e) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(e.mapQuery)}`;
+      const loc = $("#loc"),
+        lm = $("#lm");
+      if (CFG.events.length === 1) {
+        loc.href = dirU(CFG.events[0]);
+      } else {
+        lm.innerHTML = CFG.events
+          .map((e) => `<a href="${dirU(e)}" target="_blank" rel="noopener">${e.tag}<small>${e.venue}</small></a>`)
+          .join("");
+        loc.onclick = (ev) => {
+          ev.preventDefault();
+          lm.classList.toggle("on");
+        };
+        addEventListener("click", (ev) => {
+          if (!ev.target.closest("#loc,#lm")) lm.classList.remove("on");
+        });
+      }
+
+      /* open invitation */
+      $("#openBtn").onclick = () => {
+        $("#cover").classList.add("open");
+        $("#mus").classList.add("on");
+        $("#loc").classList.add("on");
+        startMusic();
+        setTimeout(() => {
+          $("#cover").style.display = "none";
+          document.body.classList.remove("lock");
+          document.querySelector("[data-first]").classList.add("in");
+        }, 2200);
+        setTimeout(() => document.querySelector("[data-first]").classList.add("in"), 900);
+      };
+    </script>
+  </body>
+</html>
