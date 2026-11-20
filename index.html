@@ -578,6 +578,55 @@
         color: var(--mute);
         font-size: 15px;
       }
+      #cover {
+        cursor: pointer;
+      }
+      .tap {
+        margin: 16px 0 0;
+        font-size: 16px;
+        color: var(--mute);
+        font-style: italic;
+        animation: fl 3s ease-in-out infinite;
+      }
+      #sc {
+        position: fixed;
+        left: 50%;
+        bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+        transform: translateX(-50%);
+        z-index: 55;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        color: var(--gold2);
+        font-size: 15px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        pointer-events: none;
+        transition: opacity 0.5s;
+        text-shadow: 0 1px 8px #000;
+        white-space: nowrap;
+      }
+      #sc.on {
+        display: flex;
+      }
+      #sc.hide {
+        opacity: 0;
+      }
+      #sc svg {
+        animation: bn 1.6s ease-in-out infinite;
+      }
+      @keyframes bn {
+        0%,
+        100% {
+          transform: translateY(0);
+          opacity: 0.45;
+        }
+        50% {
+          transform: translateY(8px);
+          opacity: 1;
+        }
+      }
       @media (min-width: 600px) {
         html {
           background: #021510;
@@ -651,6 +700,7 @@
         </p>
         <p style="margin: 0 0 26px; font-size: 21px; color: var(--gold2)">You are warmly invited</p>
         <button class="btn pulse" id="openBtn">Open Invitation</button>
+        <p class="tap">or tap anywhere on the screen</p>
       </div>
     </div>
 
@@ -666,6 +716,21 @@
       ><span>Location</span></a
     >
     <div id="lm"></div>
+    <div id="sc" aria-hidden="true">
+      <span>Scroll down for details</span
+      ><svg
+        width="28"
+        height="30"
+        viewBox="0 0 28 30"
+        fill="none"
+        stroke="#f0dfb0"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M5 6l9 8 9-8M5 16l9 8 9-8" />
+      </svg>
+    </div>
 
     <!-- HERO -->
     <section id="hero" class="pat">
@@ -951,10 +1016,14 @@
       }
 
       /* open invitation */
-      $("#openBtn").onclick = () => {
+      let opened = false;
+      const openInv = () => {
+        if (opened) return;
+        opened = true;
         $("#cover").classList.add("open");
         $("#mus").classList.add("on");
         $("#loc").classList.add("on");
+        $("#sc").classList.add("on");
         startMusic();
         setTimeout(() => {
           $("#cover").style.display = "none";
@@ -963,6 +1032,8 @@
         }, 2200);
         setTimeout(() => document.querySelector("[data-first]").classList.add("in"), 900);
       };
+      $("#cover").addEventListener("click", openInv);
+      addEventListener("scroll", () => $("#sc").classList.toggle("hide", scrollY > 60), { passive: true });
     </script>
   </body>
 </html>
